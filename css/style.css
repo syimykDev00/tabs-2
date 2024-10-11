@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+#hero {
+    background: red;
+    min-height: 100vh;
+}
+
+.tabs {
+    background: linear-gradient(blue,red,blue);
+    padding: 100px 0 100px 110px;
+    border-radius: 15px;
+}
+
+.tabs input {
+    display: none;
+}
+
+.tabs img {
+    width: 300px;
+    height: 200px;
+    border: 2px solid white;
+    object-fit: contain;
+    animation: ani 1.5s alternate;
+}
+
+@keyframes img {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#boxing:checked ~ .wrestling ,
+#boxing:checked ~ .mma,
+#boxing:checked ~ .karate,
+#boxing:checked ~ .football,
+#boxing:checked ~ .basketball {
+    opacity: .3;
+    transition: .4s;
+    transform: scale(0.8);
+}
+
+#wrestling:checked ~ .boxing ,
+#wrestling:checked ~ .mma,
+#wrestling:checked ~ .karate,
+#wrestling:checked ~ .football,
+#wrestling:checked ~ .basketball {
+    opacity: .3;
+    transition: .4s;
+    transform: scale(0.8);
+}
+
+#mma:checked ~ .boxing ,
+#mma:checked ~ .wrestling,
+#mma:checked ~ .karate,
+#mma:checked ~ .football,
+#mma:checked ~ .basketball {
+    opacity: .3;
+    transition: .4s;
+    transform: scale(0.8);
+}
+
+#karate:checked ~ .boxing ,
+#karate:checked ~ .wrestling,
+#karate:checked ~ .mma,
+#karate:checked ~ .football,
+#karate:checked ~ .basketball {
+    opacity: .3;
+    transition: .4s;
+    transform: scale(0.8);
+}
+
+#football:checked ~ .boxing ,
+#football:checked ~ .wrestling,
+#football:checked ~ .mma,
+#football:checked ~ .karate,
+#football:checked ~ .basketball {
+    opacity: .3;
+    transition: .4s;
+    transform: scale(0.8);
+}
+
+#basketball:checked ~ .boxing ,
+#basketball:checked ~ .wrestling,
+#basketball:checked ~ .mma,
+#basketball:checked ~ .karate,
+#basketball:checked ~ .football {
+    opacity: .3;
+    transition: .4s;
+    transform: scale(0.8);
+}
+
+.group {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.group label {
+    padding: 10px 30px;
+    background: blue;
+    color: white;
+    border: 2px solid white;
+    transition: .4s;
+    cursor: pointer;
+    border-radius: 15px;
+    animation: ani .1s alternate;
+}
+
+.group label:hover {
+    color: white;
+    background: black;
+    transform: scale(1.1);
+}
+
+
+@keyframes ani {
+    0% {
+        transform: translateY(-500px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
